@@ -2,21 +2,78 @@
 começar = prompt("Quer começar a jogar?\n" + "sim ou não");
 if(começar == sim)
 {    
+ tela_Inicial = prompt("ver 1-charadas ; 2-escolhas; 3-situaçao_atual");
+if(tela_Inicial == 2)
+{  casa_numero = prompt("casa 1 ; casa 2 ; casa 3; casa 4; casa 5;") 
 
-
-
-
-//sim (cor)
-alert("1 rosa\n" + "2 azul\n" + "3 vermelho\n" + "4 verde\n" + "5 amarelo\n");
-//(bebida)
-alert("1 cocacola\n" + "2 fanta\n" + "3 cerveja\n" + "4 agua\n" + "5 suco\n");
-//(nacionalidade)
-alert("1 argentino\n" + "2 coreano\n" + "3 russo\n" + "4 portugues\n" + "5 brasileiro\n");
-//(animal)
-alert("1 cachorro\n" + "2 raposa\n" + "3 gaivota\n" + "4 urso\n" + "5 capivara\n");
-//(musica)
-alert("1 rock\n" + "2 rbd\n" + "3 samba\n" + "4 classica\n" + "5 kpop\n");
+   caracteristicas = prompt( "1 cor; 2 bebida; 3 nacionalidade;4 animal; 5 musica")
+if (caracteristicas == 1)
+{   
+prompt("1 rosa\n" + "2 azul\n" + "3 vermelho\n" + "4 verde\n" + "5 amarelo\n");
 }
-// casa 1 = 1 ; 2;3,4;1
-//casa 2 = 3;4;2;1;2
-// casa 3 =2;
+if (caracteristicas == 2)
+{
+prompt("1 cocacola\n" + "2 fanta\n" + "3 cerveja\n" + "4 agua\n" + "5 suco\n");
+}
+if (caracteristicas == 3)
+{
+prompt("1 argentino\n" + "2 coreano\n" + "3 russo\n" + "4 portugues\n" + "5 brasileiro\n");
+}
+if (caracteristicas == 4)
+{    
+prompt("1 cachorro\n" + "2 raposa\n" + "3 gaivota\n" + "4 urso\n" + "5 capivara\n");
+}
+if (caracteristicas == 5)
+{
+    prompt("1 rock\n" + "2 rbd\n" + "3 samba\n" + "4 classica\n" + "5 kpop\n");
+}
+}
+}
+// casa 1 =1;2;3,4;1
+//casa 2  =3;4;2;1;2
+// casa 3 =2;5;1;2;4
+// casa 4 =4;3;5;5;3
+// casa 5 =5;1;4;3;5
+
+let casas= [
+    {
+        posiçao: "casa 1",
+        cor: "",
+        bebida: 0,
+        nacionalidade: 0,
+        animal: 0,
+        musica: 0
+    },
+    {
+        posiçao: "casa 2",
+        cor: "",
+        bebida: 0,
+        nacionalidade: 0,
+        animal: 0,
+        musica: 0
+    },
+    {
+        posiçao: "casa 3",
+        cor: "",
+        bebida: 0,
+        nacionalidade: 0,
+        animal: 0 ,
+        musica: 0
+    },
+    {
+        posiçao: "casa 4",
+        cor: "",
+        bebida: 0,
+        nacionalidade: 0,
+        animal: 0,
+        musica: 0
+    },
+    {
+        posiçao: "casa 5",
+        cor: "",
+        bebida: 0,
+        nacionalidade: 0,
+        animal: 0,
+        musica: 0
+    }
+];
