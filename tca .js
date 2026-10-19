@@ -64,45 +64,23 @@ if (caracteristicas == 5)
 // casa 4 =4;3;5;5;3
 // casa 5 =5;1;4;3;5
 
-let casas= [
-    {
-        posiçao: "casa 1",
-        cor: "",
-        bebida: 0,
-        nacionalidade: 0,
-        animal: 0,
-        musica: 0
-    },
-    {
-        posiçao: "casa 2",
-        cor: "",
-        bebida: 0,
-        nacionalidade: 0,
-        animal: 0,
-        musica: 0
-    },
-    {
-        posiçao: "casa 3",
-        cor: "",
-        bebida: 0,
-        nacionalidade: 0,
-        animal: 0 ,
-        musica: 0
-    },
-    {
-        posiçao: "casa 4",
-        cor: "",
-        bebida: 0,
-        nacionalidade: 0,
-        animal: 0,
-        musica: 0
-    },
-    {
-        posiçao: "casa 5",
-        cor: "",
-        bebida: 0,
-        nacionalidade: 0,
-        animal: 0,
-        musica: 0
+class casas
+ {
+    constructor(casa_numero, cor, bebida, nacionalidade, animal,musica) {
+        this.casa = casa_numero;
+        this.cor = cor;
+        this.bebida = bebida;
+        this.nacionalidade = nacionalidade;
+        this.animal = animal;
+        this.musica = musica;
     }
+
+
+}
+let ordem_certa = [
+    new casas("1", "1", "2", "3", "4","1"),
+    new casas("2", "3", "4", "2", "1","2"),
+    new casas("3", "2", "5", "1", "2","4"),
+    new casas("4", "4", "3", "5", "5","3"),
+    new casas("5", "5", "1", "4", "3","5"),
 ];
