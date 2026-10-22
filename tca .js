@@ -42,9 +42,9 @@ function abrirCasa(numero)
 {
     return respostas_jogador[numero - 1];
 }    
-while (tela_Inicial != 4)
+while (tela_Inicial != 5)
     {
-        tela_Inicial = prompt("1 - Charadas\n" + "2 - Escolhas\n" + "3 - Situação atual\n" + "4 - Sair");
+        tela_Inicial = prompt("1 - Charadas\n" + "2 - Escolhas\n" + "3 - Situação atual\n" + "4 - Finalizar jogo\n" + "5 - Sair");
     
     
         if (tela_Inicial == 1)
@@ -164,6 +164,7 @@ while (tela_Inicial != 4)
     
    if (tela_Inicial == 2)
    {
+    //empedir que a mesma caracteristica va para mais de uma casa
        casa_numero = prompt("Casa 1; casa 2; casa 3; casa 4; casa 5; 0 - voltar");
    
    
@@ -276,7 +277,22 @@ while (tela_Inicial != 4)
        }
    
    
-      
+      //descobrir o poque nao abre o if == 4
    }
+    if (tela_Inicial == 4)
+      { 
+        for (let i = 0; i < respostas_jogador.length; i++)
+           {    
+            alert = respostas_jogador[i].casa == ordem_certa[i].casa;
+            alert =  respostas_jogador[i].cor == ordem_certa[i].cor;
+            alert =  respostas_jogador[i].bebida == ordem_certa[i].bebida;
+            alert =  respostas_jogador[i].nacionalidade == ordem_certa[i].nacionalidade;
+            alert =  respostas_jogador[i].animal == ordem_certa[i].animal;
+            alert =  respostas_jogador[i].musica == ordem_certa[i].musica;
+        
+           }
+
+      }
+
    }
 }
