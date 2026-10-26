@@ -11,7 +11,8 @@ let resposta_cor = 0;
 let resposta_bebida = 0;
 let resposta_nacionalidade = 0;
 let resposta_animal = 0;
-let resposta_musica = 0
+let resposta_musica = 0;
+let quantidade_acertos = 0;
 class casas
  {
     constructor(casa_numero, cor, bebida, nacionalidade, animal,musica) {
@@ -275,24 +276,50 @@ while (tela_Inicial != 5)
            "\nAnimal: " + respostas_jogador[i].animal +
            "\nMúsica: " + respostas_jogador[i].musica + "\n\n");
        }
-   
-   
-      //descobrir o poque nao abre o if == 4
    }
+
     if (tela_Inicial == 4)
       { 
-        for (let i = 0; i < respostas_jogador.length; i++)
+        for (let i = 1; i < respostas_jogador.length; i++)
            {    
-            alert = respostas_jogador[i].casa == ordem_certa[i].casa;
-            alert =  respostas_jogador[i].cor == ordem_certa[i].cor;
-            alert =  respostas_jogador[i].bebida == ordem_certa[i].bebida;
-            alert =  respostas_jogador[i].nacionalidade == ordem_certa[i].nacionalidade;
-            alert =  respostas_jogador[i].animal == ordem_certa[i].animal;
-            alert =  respostas_jogador[i].musica == ordem_certa[i].musica;
-        
+             if (respostas_jogador[i].casa == ordem_certa[i].casa)
+             {   
+                quantidade_acertos++; 
+             }
+             if(respostas_jogador[i].cor == ordem_certa[i].cor)
+             {
+                quantidade_acertos++;
+             }
+             if(respostas_jogador[i].bebida == ordem_certa[i].bebida)
+             {
+                    quantidade_acertos++;
+             }
+             if(respostas_jogador[i].nacionalidade == ordem_certa[i].nacionalidade)
+             {
+                quantidade_acertos++;
+             }
+             if(respostas_jogador[i].animal == ordem_certa[i].animal)
+             {
+                quantidade_acertos++;
+             }
+             if(respostas_jogador[i].musica == ordem_certa[i].musica)
+             {
+                quantidade_acertos++;
+             }
            }
-
-      }
+         alert(quantidade_acertos);
+            tela_Inicial = 5;
+//criar um while ou buscar uma alternativa para que volte para começar
+        }
 
    }
+}
+//corrigir o function
+function Verifica_dupliacado(vetor)
+{
+    for (let i = 0; i < respostas_jogador.length; i++)
+        {  casas[i] == casas[i];
+            alert("uma caracteristica esta se repetindo em duas casa")
+               
+        }
 }
