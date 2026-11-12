@@ -57,6 +57,106 @@ function abrirCasa(numero)
 {
     return respostas_jogador[numero - 1];
 }    
+let cores = ["","Rosa","Azul","Vermelho","Verde","Amarelo"];
+      
+let fundos = ["","pink","blue","red","green","yellow"];
+
+let bebidas = ["","Coca-Cola","Fanta","cerveja","água","Suco"];
+
+let nacionalidades = ["","Argentino","Coreano","Russo","Português","Brasileiro"];
+
+let animais = ["","cachorro","Raposa","Gaivota","Urso","Capivara"];
+
+let musicas =["","Rock","Pop","Samba","Classica","K-pop"];
+
+function mostrarTabuleiro()
+
+{
+
+let texto = "";
+
+for(let i = 0;i < respostas_jogador.length;i++)
+
+{
+
+    let casa = respostas_jogador[i];
+
+    let cor = "vazio";
+
+    let fundo = "lightgray";
+
+    let bebida = "vazio";
+
+    let nacionalidade = "vazio";
+
+    let animal = "vazio";
+
+    let musica = "vazio";
+
+
+
+    if(casa.cor != "0")
+
+    {
+
+       cor = cores[casa.cor];
+
+       fundo = fundos[casa.cor];
+
+    }
+
+if(casa.bebida != "0")
+
+{
+
+   bebida = bebidas[casa.bebida];
+
+}
+
+if(casa.nacionalidade != "0")
+
+{
+
+   nacionalidade = nacionalidades[casa.nacionalidade];
+
+}
+
+if(casa.animal != "0")
+
+{
+
+   animal = animais[casa.animal];
+
+}
+
+if(casa.musica != "0")
+
+{
+
+   musica = musicas[casa.musica];
+
+}
+
+texto = texto +
+
+"<div class='casa'>" +
+
+"<h3>Casa " + casa.casa + "</h3>" +
+
+"<p>Bebida: " + bebida + "</p>" +
+
+"<p>Animal: " + animal + "</p>" +
+
+"<p>Música: " + musica + "</p>" +
+
+"</div>";
+
+}  
+
+document.getElementById("tabuleiro").innerHTML = texto;
+
+}
+
 while (tela_Inicial != 5)
     {
         tela_Inicial = prompt("1 - Charadas\n" + "2 - Escolhas\n" + "3 - Situação atual\n" + "4 - Finalizar jogo\n" + "5 - Sair");
@@ -292,18 +392,7 @@ if (caracteristicas == 5)
 }
    if (tela_Inicial == 3)
    {
-       let texto = "";
-   
-   
-       for (let i = 0; i < respostas_jogador.length; i++)
-       {
-      alert("Casa " + respostas_jogador[i].casa +
-        "\nCor: " + respostas_jogador[i].cor +
-        "\nBebida: " + respostas_jogador[i].bebida +
-        "\nNacionalidade: " + respostas_jogador[i].nacionalidade +
-        "\nAnimal: " + respostas_jogador[i].animal +
-        "\nMúsica: " + respostas_jogador[i].musica);
-       }
+     mostrarTabuleiro()
    }
 
 
